@@ -1,0 +1,59 @@
+.container {
+    margin: 5rem auto;
+}
+
+.row h3 {
+    width: 50%;
+    margin: 2rem auto;
+    text-align: center;
+    font-weight: bold;
+}
+
+.card {
+    margin: 1rem;
+}
+
+.readMe {
+    background: #536ab9;
+    width: 100%;  
+    margin: 1rem auto;
+    padding: 1rem;
+}
+
+.readMe .control-group {
+    margin-bottom: 1rem;
+}
+
+.boldMe {
+    font-weight: bold;
+}
+
+.cardContainer .form-actions {
+    text-align: center;
+}
+
+.cardContainer .btn {
+    width: 50%;
+}
+
+.centerThis {
+    text-align: center;
+}
+
+.formContainer .alert,
+.formContainer label{
+    color: #FFF;
+}
+
+.formContainer table {
+    background: #FFF;
+}
+
+.deleteForm .btn {
+    width: 45%;
+    margin-bottom: 1rem;
+}
+
+.deleteForm .btn-warning {
+    font-weight: bold;
+}

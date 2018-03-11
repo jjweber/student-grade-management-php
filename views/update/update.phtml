@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="../public/css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="../public/css/styles.css">
+    </head>
+    
+    <body>
+        <div class="container">
+        
+            <div class="span10 offset1">
+                <div class="row">
+                    <h3>Update A Student</h3>
+                </div>
+
+                <div class="formContainer readMe">
+                    <form class="form-horizontal" action="Update/updateAction" method="post" enctype="multipart/form-data">                       
+                        <input type="hidden" name="studentid" value="<?php echo $data[0]["studentid"];?>"/>
+                        <div class="form-group <?php echo !empty($nameError)?'error':'';?>">
+                            <label class="boldMe" for="studentname">Student Name</label>
+                            <input name="studentname" type="text" class="form-control" id="studentname" placeholder="Name" value="<?php  echo $data[0]["studentname"] ?>">
+                            <?php if(isset($_GET['nameError'])) : ?>
+                                <div class="alert alert-danger " role="alert">
+                                    <?php echo $_GET['nameError']; ?>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+                        <div class="form-group <?php echo !empty($percent)?'error':'';?>">
+                            <label class="boldMe" for="studentpercent">Student Percent</label>
+                            <input name="studentpercent" type="number" class="form-control" id="studentpercent" placeholder="Percent" value="<?php  echo $data[0]["studentpercent"]; ?>">
+                            <?php if(isset($_GET['percentError'])) : ?>
+                                <div class="alert alert-danger " role="alert">
+                                    <?php echo $_GET['percentError']; ?>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-success">Update</button>
+                            <a class="btn btn-danger" href="Index">Back</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+                    
+        </div> <!-- /container -->
+        <script src="../public/js/bootstrap.min.js"></script>
+    </body>
+</html>

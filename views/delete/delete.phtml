@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="../public/css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="../public/css/styles.css">
+    </head>
+    
+    <body>
+        <div class="container">
+
+            <div class="span10 offset1 centerThis">
+                <div class="row">
+                    <h3>Delete A Student</h3>
+                </div>
+                <div class="formContainer readMe">
+                    <form class="form-horizontal deleteForm" action="Delete/removeAction" method="post" enctype="multipart/form-data">
+                        <input type="hidden" name="studentid" value="<?php echo $data[0]["studentid"]; ?>"/>
+                        <h4 class="alert alert-error">Are you sure you want to delete <?php echo $data[0]["studentname"]; ?>?</h4>
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-danger">Yes</button>
+                            <a class="btn btn-warning" href="Index">No</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+                
+        </div> <!-- /container -->
+    <script src="../public/js/bootstrap.min.js"></script>
+    </body>
+</html>

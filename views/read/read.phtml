@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="../public/css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="../public/css/styles.css">
+    </head>
+
+    <body>
+        <div class="container">
+
+            <div class="span10 offset1">
+                <div class="row">
+                    <h3>Student's Information</h3>
+                    <div class="cardContainer readMe">
+                        <div class="card">
+                            <h5 class="card-header boldMe">Student Name:</h5>
+                            <div class="card-body">
+                                <p class="card-text"><?php echo $data[0]["studentname"];?></p>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <h5 class="card-header boldMe">Student Percentage:</h5>
+                            <div class="card-body">
+                                <p class="card-text"><?php echo $data[0]["studentpercent"];?></p>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <h5 class="card-header boldMe">Student Letter Grade:</h5>
+                            <div class="card-body">
+                                <p class="card-text"><?php echo $data[0]["studentlettergrade"];?></p>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <a class="btn btn-danger" href="Index">Back</a>
+                        </div>
+                    </div>
+                </div>
+                    
+            </div>
+                
+        </div> <!-- /container -->
+    <script src="../public/js/bootstrap.min.js"></script>
+    </body>
+</html>

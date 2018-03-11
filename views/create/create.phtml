@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="../public/css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="../public/css/styles.css">
+    </head>
+ 
+    <body>
+        <div class="container">
+     
+            <div class="span10 offset1">
+                <div class="row">
+                    <h3>Create A Student</h3>
+                </div>
+
+                <div class="formContainer readMe">
+
+                    <form class="form-horizontal" action="Create/addAction" method="post" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label class="boldMe" for="studentname">Student Name</label>
+                            <input name="studentname" type="text" class="form-control" id="studentname"  placeholder="Name">
+                            <?php if(isset($_GET['nameError'])) : ?>
+                                <div class="alert alert-danger " role="alert">
+                                    <?php echo $_GET['nameError']; ?>
+                                </div>
+                                <span class="help-inline"><?php echo $_GET['nameError']; ?></span>
+                            <?php endif; ?>
+                        </div>                       
+                        <div class="form-group">
+                            <label class="boldMe" for="studentpercent">Student Percent</label>
+                            <input name="studentpercent" type="number" class="form-control" id="studentpercent" placeholder="Percent">
+                            <?php if (isset($_GET['percentError'])): ?>
+                                <div class="alert alert-danger " role="alert">
+                                    <?php echo $_GET['percentError']; ?>
+                                </div>
+                            <?php endif; ?>
+                        </div>   
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-success">Create</button>
+                            <a class="btn btn-danger" href="Index">Back</a>
+                        </div>
+                    </form>
+                </div>
+            </div>                 
+        </div> <!-- /container -->
+        <script src="../public/js/bootstrap.min.js"></script>
+    </body>
+</html>
